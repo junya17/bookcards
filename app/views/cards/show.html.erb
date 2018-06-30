@@ -1,0 +1,45 @@
+<h1>Cards#show</h1>
+<p>Find me in app/views/cards/show.html.erb</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>題名</th>
+            <td>
+                <%= @book.id %>
+            </td>
+        </tr>
+    </thead>
+    <tr>
+        <th>著者</th>
+        <td>
+            <%= @book.author %>
+        </td>
+    </tr>
+    <tr>
+        <th>価格</th>
+        <td>
+            <%= @book.price %>
+        </td>
+    </tr>
+    <tr>
+        <th>出版社</th>
+        <td>
+            <%= @book.publisher %>
+        </td>
+    </tr>
+    <tr>
+        <th>評価</th>
+        <td>
+            <%= @book.evaluation %>
+        </td>
+    </tr>
+    <tr>
+        <th>レビュー</th>
+        <td>
+            <%= @book.review %>
+        </td>
+    </tr>
+</table>
+<p class="link">
+    <a href="/cards">&lt;&lt; ※トップページに戻る</a>
+</p>

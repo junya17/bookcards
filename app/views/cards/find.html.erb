@@ -1,0 +1,24 @@
+<table>
+    <tr>
+        <th>ID</th>
+        <th>題名</th>
+        <th>著者</th>
+    </tr>
+    <% @book.each do |obj|%>
+        <tr>
+            <td>
+                <%= obj.id %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= obj.title %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= obj.author %>
+            </td>
+        </tr>
+        <%end%>
+</table>
