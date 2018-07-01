@@ -2,6 +2,7 @@
 <p>読書済みの書籍を紹介しています。サイト運営者のレビューなども記載しています。</p>
 <p>新規登録は上記の”登録”からできます。右上のフォームから書籍の検索もできます。</p>
 
+<div class="table-responsive">
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -13,29 +14,27 @@
     </thead>
 
     <% @book.each do | book | %>
-        <tbody>
-            <tr>
-                <td>
-                    <%= book.id %>
-                </td>
-                <td>
-                    <a href="/cards/<%=book.id%>">
-                        <%= book.title %>
-                    </a>
-                </td>
-                <td>
-                    <% book.author%>
-                </td>
-                <td>
-                    <a href="/cards/edit/<%= book.id %>">編集</a>
-                </td>
-                <td>
-                    <a href="javascript:window.delData(
-                    <%= (book.id.to_s + " , '".to_s + book.title.to_s).html_safe %>'); ">削除</a>
-                </td>
-            </tr>
-        <%end%>
-    </tbody>
-
+        <tr>
+            <td>
+                <%= book.id %>
+            </td>
+            <td>
+                <a href="/cards/<%=book.id%>">
+                    <%= book.title %>
+                </a>
+            </td>
+            <td>
+                <% book.author%>
+            </td>
+            <td>
+                <a href="/cards/edit/<%= book.id %>">編集</a>
+            </td>
+            <td>
+                <a href="javascript:window.delData(
+                <%= (book.id.to_s + " , '".to_s + book.title.to_s).html_safe %>'); ">削除</a>
+            </td>
+        </tr>
+    <%end%>
 </table>
+</div>
 <p class="link "><a href="/cards/add ">※新しいデータを入力　&gt;&gt;</a></p>
