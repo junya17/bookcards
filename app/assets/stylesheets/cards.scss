@@ -1,4 +1,4 @@
-// Place all the styles related to the cards controller here.
+// Place all the styles related to the cards controller here. 
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // Custom bootstrap variables must be set or imported *before* bootstrap.
@@ -12,8 +12,9 @@ table {
     margin-top:10px;
 }
 
-@media (max-width:767px) { 
-    /*　画面サイズが767px以下の場合読み込む　*/
-    body { font-size:1.4em;}
-    .navbar-brand {font-size:1.4em;}
+.container {
+    max-width: 100%;
 }
+
+@media (max-width: 767.98px) { 
+ }

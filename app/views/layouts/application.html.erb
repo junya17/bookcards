@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -32,12 +33,12 @@
     <% end %>
     </form>
   </div>
-</nav>
-<div class="container">
+  </nav>
+  <div class="container">
     <%= yield %>
-</div>
-    <div class="card-footer">
+  </div>
+  <div class="card-footer">
     <small class="text-muted">create by sumiya</small>
   </div>
-  </body>
+    </body>
 </html>
