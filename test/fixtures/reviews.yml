@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bookcards_id: 1
+  title: MyText
+  review: MyText
+
+two:
+  bookcards_id: 1
+  title: MyText
+  review: MyText
