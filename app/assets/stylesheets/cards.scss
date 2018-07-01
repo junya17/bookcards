@@ -12,6 +12,8 @@ table {
     margin-top:10px;
 }
 
-.form-controll {
-    width:500px;
+@media screen and (max-width:767px) { 
+    /*　画面サイズが767px以下の場合読み込む　*/
+    body { font-size:1.4em;}
+    .navbar-brand {font-size:1.4em;}
 }
