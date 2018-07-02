@@ -1,7 +1,7 @@
 class CreateReviews < ActiveRecord::Migration[5.1]
   def change
     create_table :reviews do |t|
-      t.integer :bookcards_id
+      t.integer :bookcard_id
       t.text :title
       t.text :review
 

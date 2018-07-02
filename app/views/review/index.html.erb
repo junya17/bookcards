@@ -1,0 +1,41 @@
+<h1>書籍のレビュー一覧</h1>
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>書籍のタイトル</th>
+                <th>レビュー</th>
+                <th colspan="2"></th>
+            </tr>
+        </thead>
+
+        <% @review.each do |review| %>
+            <tr>
+                <td>
+                    <%=review.bookcard_id %>
+                </td>
+                <td>
+                    <%=review.bookcard.title %>
+                </td>
+                <td>
+                    <%=review.review %>
+                </td>
+                <td>
+                    <a href="/review/edit/<%= review.id %>">Edit</a>
+                </td>
+                <td>
+                    <a href="javascript:delData(<%= review.id %>)">削除</a>
+                </td>
+            </tr>
+            <%end%>
+    </table>
+</div>
+<script>
+    function delData(num) {
+        if (confirm('このデータを削除しますか？')) {
+            document.location = "/review/delete/" + num;
+        }
+        return false;
+    }
+</script>

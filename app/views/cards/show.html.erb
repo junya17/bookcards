@@ -1,11 +1,10 @@
-<h1>Cards#show</h1>
-<p>Find me in app/views/cards/show.html.erb</p>
+<h1>書籍の詳細</h1>
 <table class="table table-bordered">
     <thead>
         <tr>
             <th>題名</th>
             <td>
-                <%= @book.id %>
+                <%= @book.title %>
             </td>
         </tr>
     </thead>
@@ -36,10 +35,17 @@
     <tr>
         <th>レビュー</th>
         <td>
-            <%= @book.review %>
+        <% if  @book.review.nil?%>
+            まだ、レビューはありません。
+        <%else%>
+            <%= @book.review.review %>
+        <%end%>   
         </td>
     </tr>
 </table>
+
+<p><a href="/review/add">＞＞この本のレビューを書く</a>
+
 <p class="link">
     <a href="/cards">&lt;&lt; ※トップページに戻る</a>
 </p>

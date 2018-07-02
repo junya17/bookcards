@@ -1,5 +1,6 @@
 class Bookcard < ApplicationRecord
-    validates :title, presence: true
+  has_one :review
+  validates :title, presence: true
     
 
     def self.search(search) #self.でクラスメソッドとしている

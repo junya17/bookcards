@@ -1,0 +1,31 @@
+<h1>Review#edit</h1>
+<p>Find me in app/views/review/edit.html.erb</p>
+
+<table class="table table-borderless">
+            <%= form_for(@review, url:{controller:'review', action:'update', id:@review.id}) do |form| %>
+                <tr>
+                    <th>ID</th>
+                    <td>
+                        <%= form.text_field :bookcard_id, :class=>'form-control' %>
+                    </td>
+                </tr>
+                <tr>
+                    <th>タイトル</th>
+                    <td>
+                        <%= form.text_field :title, :class=>'form-control' %>
+                    </td>
+                </tr>
+                <tr>
+                    <th>レビュー</th>
+                    <td>
+                        <%= form.text_field :review, :class=>'form-control' %>
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>
+                        <%= form.submit "送信", :class=>"btn btn-primary" %>
+                    </td>
+                </tr>
+                <% end %>
+        </table>
