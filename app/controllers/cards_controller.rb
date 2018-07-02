@@ -21,7 +21,7 @@ class CardsController < ApplicationController
     @book = Bookcard.find(params[:id])
     if request.patch? then
       @book.update(book_params)
-    goback
+      goback
     end
   end
 
