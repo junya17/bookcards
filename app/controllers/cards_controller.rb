@@ -19,10 +19,12 @@ class CardsController < ApplicationController
 
   def edit
     @book = Bookcard.find(params[:id])
-    if request.patch? then
-      @book.update(book_params)
-      goback
-    end
+  end
+
+  def update
+    obj = Bookcard.find(params[:id])
+    obj.update(book_params)
+    redirect_to '/cards'
   end
 
   def delete

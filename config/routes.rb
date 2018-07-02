@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'review/index'
   get 'review', to: 'review#index'
 
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
   post 'cards/find', to: 'cards#find'
 
   get 'cards/edit/:id', to: 'cards#edit'
-  patch 'cards/edit/:id', to: 'cards#edit'
+  patch 'cards/edit/:id', to: 'cards#update'
 
   get 'cards/delete/:id', to: 'cards#delete'
 
